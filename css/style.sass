@@ -1,0 +1,200 @@
+@import "normalize"
+@import "skeleton"
+@import 'https://fonts.googleapis.com/css?family=Voltaire'
+
+body
+  color: black
+  height: 200vh
+  font-family: "Voltaire"
+  padding-bottom: 50vh
+
+  // hamburger-icon
+
+.hamburger-icon
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  height: 40px
+  width: 40px
+  position: absolute
+  right: 2em
+  top: 1.5em
+  cursor: pointer
+  z-index: 9
+  .bar
+    height: 3px
+    width: 100%
+    background-color: white
+    border-radius: 2em
+    transition: all .3s ease-in-out
+  &.active
+    position: fixed
+    .bar
+      background-color: #212121
+    .bar:nth-child(2)
+      transform: scale(0)
+    .bar:nth-child(1)
+      transform: rotate(-45deg)
+      transform-origin: right
+      height: 4px
+    .bar:nth-child(3)
+      transform: rotate(45deg) translateY(3px)
+      transform-origin: right
+
+// sidenav
+.sidenav
+  position: fixed
+  top: 0
+  bottom: 0
+  right: 0
+  width: 300px
+  background-color: #FFF
+  color: black
+  height: 100%
+  z-index: 4
+  transform: translateX(350px)
+  transition: transform .3s ease-out
+  &.active
+    transform: translateX(0)
+  ul
+    margin: 1em 2em
+    list-style: none
+    .logo
+      width: 150px
+      height: 150px
+      background-color: transparentize(black, .9)
+      border-radius: 50%
+      display: block
+      margin: 2em auto
+      font-size: 24px
+    li
+      cursor: pointer
+
+
+.background
+  height: 100vh
+  background-image: url("../images/back.jpg")
+  background-position: center bottom
+  background-size: cover
+  background-attachment: fixed
+
+.foreground
+  height: 100vh
+  position: absolute
+  top: 0
+  width: 100%
+
+.text-wrap
+  position: absolute
+  color: #FFF
+  top: 50%
+  left: 50%
+  color: white
+  transform: translateX(-50%) translateY(-50%)
+  width: 80%
+  .text
+    font-size: 68px
+    display: inline-block
+    padding: 0 .2em
+    background-color: transparentize(black, .9)
+
+// text content after everything
+.content
+  color: black
+  .container
+    margin-top: 10vh
+    .six.columns
+      height: 50vh
+      .heading
+        position: absolute
+        top: 25vh
+        background-color: black
+        color: white
+        padding: .8em 5em .5em 1em
+        z-index: 14
+        h3
+          margin: 0
+    img
+      height: auto
+      width: 100%
+    .guitar-image-one
+      filter: drop-shadow(0px 5px 5px #c3c3c3s)
+      &.shadow
+        margin-top: 100px
+        // animation: 3s ease-in-out infinite floatingShadow2
+        // margin-bottom: -60px
+    .body
+      animation: 3s ease-in-out infinite floating
+      z-index: 4
+    .shadow
+      z-index: 3
+      margin-top: -60px
+      margin-left: -30px
+      bottom: 0
+      animation: 3s ease-in-out infinite floatingShadow
+      transform: rotateX(70deg) translateY(-40px) translateX(15px) scale(.9)
+      margin-top: -60px
+      filter: blur(10px) grayscale(1) contrast(0) opacity(.4)
+      left: 0
+
+    .guitar-image-two
+      &.body
+        margin-top: 40px
+
+.find-events
+  background-color: #212121
+  .seven.columns
+    height: 100vh
+    background:
+      size: cover
+      repeat: no-repeat
+      image: url(../images/findEvent.jpg)
+      position: -10vw center
+      attachment: fixed
+  .five.columns
+    padding-top: 2em
+    color: white
+    float: right
+    .event-wrap
+      display: flex
+      flex-wrap: wrap
+      .card
+        color: black
+        background-color: white
+        display: inline-block
+        margin: 12px
+        width: 300px
+        padding: .7em 1em
+        box-shadow: 0 0 4px 0 #c3c3c3
+        h5
+          margin-bottom: 0px
+          line-height: 28px
+        span
+          display: block
+          color: #a9a9a9
+        a
+          float: right
+          display: inline-block
+          border: 4px solid #212121
+          color: #212121
+          padding: .3em .8em
+          transition: all .3s ease-in-out
+          transform-origin: left
+          &:hover
+            color: #FFF
+            box-shadow: inset 100px 0 0 0 #212121
+
+@keyframes floating
+  0%,100%
+    transform: translateY(0)
+  50%
+    transform: translateY(10px)
+@keyframes floatingShadow
+  0%,100%
+    margin-top: -25px
+    transform: scaleY(.4) translateX(15px) scale(.85)
+    filter: blur(30px) grayscale(1) contrast(0) opacity(.4)
+  50%
+    transform: scaleY(.4) translateX(20px) scale(.9)
+    margin-top: -45px
+    filter: blur(10px) grayscale(1) contrast(0) opacity(.4)
