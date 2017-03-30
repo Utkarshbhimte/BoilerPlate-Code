@@ -1,23 +1,17 @@
 {
-    "name": "BoilerPlate-Code",
-    "version": "0.0.0",
-    "description": "A BoilerPlate Code with Normalize, Skeleton, jQuery and Gulp compatilble with Jade and Sass",
+    "name": "Healthlytics",
+    "version": "0.0.1",
+    "description": "",
     "main": "gulpfile.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "Utkarsh Bhimte",
+    "author": "Shantam Kumar",
     "license": "ISC",
-    "devDependencies": {
-        "browser-sync": "^2.8.0",
-        "gulp": "^3.9.0",
-        "gulp-autoprefixer": "^2.3.1",
-        "gulp-jade": "^1.0.1",
-        "gulp-sass": "^2.0.4"
-    },
+    "devDependencies": {},
     "repository": {
         "type": "git",
-        "url": "https://github.com/Utkarshbhimte/BoilerPlate-Code.git"
+        "url": "https://github.com/Shantam44/Heatlytics-FrontEnd.git"
     },
     "keywords": [
         "jade",
@@ -26,7 +20,7 @@
         "browsersync"
     ],
     "bugs": {
-        "url": "https://github.com/Utkarshbhimte/BoilerPlate-Code/issues"
+        "url": "https://github.com/Shantam44/Heatlytics-FrontEnd/issues"
     },
-    "homepage": "https://github.com/Utkarshbhimte/BoilerPlate-Code"
+    "homepage": "https://github.com/Shantam44/Heatlytics-FrontEnd"
 }
